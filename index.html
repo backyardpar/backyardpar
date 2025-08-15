@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backyard Par - Mobile Golf Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1a202c;
+            background-color: #f7fafc;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-overlay {
+            background-image: linear-gradient(to right, rgba(29, 78, 216, 0.7) 0%, rgba(16, 185, 129, 0.7) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-3xl font-bold text-gray-900 transition-colors duration-300 hover:text-green-600">Backyard Par</a>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">About Us</a>
+                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">How It Works</a>
+                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Gallery</a>
+                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl transform hover:scale-105">Book Now</a>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">About Us</a>
+                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">How It Works</a>
+                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">Gallery</a>
+                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl w-4/5 text-center mt-4">Book Now</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero/Landing Section -->
+    <section id="home" class="relative bg-cover bg-center flex-grow flex items-center justify-center text-white" style="background-image: url('https://placehold.co/1920x1080/0d9488/ffffff?text=Golf+Simulator+Placeholder+Image');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="z-10 px-4 py-16">
+            <!-- Slogan is centered and fits on one line -->
+            <h1 class="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight drop-shadow-lg">Your Game. Your Rules. Your Backyard.</h1>
+            <!-- Descriptive text is left-aligned within a centered container -->
+            <div class="max-w-2xl mx-auto text-left">
+                <p class="text-base sm:text-lg md:text-xl font-light mb-8 drop-shadow">
+                    Backyard Par is your personal golf course on demand. Whether you're planning a party, corporate event, or just a weekend of fun, we bring the swing to you. Setup is fast, the tech is sharp, and the experience is unforgettable.
+                </p>
+            </div>
+            <!-- The button is in its own centered container -->
+            <div class="text-center mt-8">
+                <a href="book-now.html" class="bg-green-500 text-white px-8 py-4 text-lg font-bold rounded-full hover:bg-green-600 transition duration-300 shadow-2xl transform hover:scale-105">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2023 Backyard Par. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

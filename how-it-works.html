@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - Backyard Par</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1a202c;
+            background-color: #f7fafc;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 500px; /* Adjust based on max expected content height */
+            transition: max-height 0.4s ease-in;
+        }
+        .accordion-item[data-expanded="true"] .arrow-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-3xl font-bold text-gray-900 transition-colors duration-300 hover:text-green-600">Backyard Par</a>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">About Us</a>
+                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">How It Works</a>
+                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Gallery</a>
+                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl transform hover:scale-105">Book Now</a>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">About Us</a>
+                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">How It Works</a>
+                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">Gallery</a>
+                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl w-4/5 text-center mt-4">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <section class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">How It Works</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center transition duration-300 hover:shadow-2xl hover:scale-105">
+                        <div class="text-6xl text-green-600 mb-4">⛳️</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">We Come to You</h3>
+                        <p class="text-gray-600">
+                            Our professional team handles the entire setup at your desired location, whether it's your backyard, a community center, or an event space.
+                        </p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center transition duration-300 hover:shadow-2xl hover:scale-105">
+                        <div class="text-6xl text-green-600 mb-4">🖥️</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">State-of-the-Art Simulator</h3>
+                        <p class="text-gray-600">
+                            We use top-tier simulator technology to give you an incredibly realistic and fun golfing experience with a wide variety of virtual courses.
+                        </p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8 text-center transition duration-300 hover:shadow-2xl hover:scale-105">
+                        <div class="text-6xl text-green-600 mb-4">🎉</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Perfect for Any Occasion</h3>
+                        <p class="text-gray-600">
+                            Birthdays, corporate events, family gatherings, or just a day of fun—our mobile simulator is a hole-in-one for any party.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item bg-gray-100 rounded-xl shadow-md overflow-hidden" data-expanded="false">
+                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 focus:outline-none">
+                            <span>How much space is needed for the setup?</span>
+                            <span class="arrow-icon transition-transform duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6 pb-6 text-lg text-gray-600">
+                            <p>
+                                We require a minimum space of 15 feet wide, 20 feet deep, and 10 feet high to ensure a safe and enjoyable experience for everyone. This allows for comfortable swinging room and proper equipment placement.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item bg-gray-100 rounded-xl shadow-md overflow-hidden" data-expanded="false">
+                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 focus:outline-none">
+                            <span>Do you provide golf clubs?</span>
+                            <span class="arrow-icon transition-transform duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6 pb-6 text-lg text-gray-600">
+                            <p>
+                                Yes! We provide a variety of clubs for both right-handed and left-handed players, suitable for all skill levels. However, you are more than welcome to use your own clubs if you prefer!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item bg-gray-100 rounded-xl shadow-md overflow-hidden" data-expanded="false">
+                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 focus:outline-none">
+                            <span>How long does the setup process take?</span>
+                            <span class="arrow-icon transition-transform duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6 pb-6 text-lg text-gray-600">
+                            <p>
+                                Our professional team can have the entire setup ready to go in approximately 45-60 minutes, depending on the location and specific requirements. We handle all the heavy lifting so you can focus on having fun!
+                            </p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="accordion-item bg-gray-100 rounded-xl shadow-md overflow-hidden" data-expanded="false">
+                        <button class="flex justify-between items-center w-full p-6 text-xl font-semibold text-left text-gray-800 focus:outline-none">
+                            <span>What happens if there's bad weather?</span>
+                            <span class="arrow-icon transition-transform duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6 pb-6 text-lg text-gray-600">
+                            <p>
+                                Our simulator is designed for outdoor use in good weather. In case of inclement weather, we can easily set up indoors in a garage, large living room, or other suitable covered space. We'll work with you to find the best solution.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2023 Backyard Par. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and FAQ Accordion -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.accordion-item button').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                const content = accordionItem.querySelector('.accordion-content');
+                const isExpanded = accordionItem.getAttribute('data-expanded') === 'true';
+
+                // Close all other open accordion items
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    if (item !== accordionItem && item.getAttribute('data-expanded') === 'true') {
+                        item.setAttribute('data-expanded', 'false');
+                        item.querySelector('.accordion-content').classList.remove('active');
+                    }
+                });
+
+                // Toggle the current item
+                if (!isExpanded) {
+                    accordionItem.setAttribute('data-expanded', 'true');
+                    content.classList.add('active');
+                } else {
+                    accordionItem.setAttribute('data-expanded', 'false');
+                    content.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

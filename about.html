@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Backyard Par</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1a202c;
+            background-color: #f7fafc;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-3xl font-bold text-gray-900 transition-colors duration-300 hover:text-green-600">Backyard Par</a>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">About Us</a>
+                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">How It Works</a>
+                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Gallery</a>
+                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl transform hover:scale-105">Book Now</a>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">About Us</a>
+                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">How It Works</a>
+                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">Gallery</a>
+                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl w-4/5 text-center mt-4">Book Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About/Services Section -->
+    <main class="flex-grow">
+        <!-- New Founders Section -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">Our Story</h2>
+                <p class="text-center text-gray-700 text-lg md:text-xl leading-relaxed">
+                    Backyard Par was born from a simple mission: to bring the joy of golf to everyone, everywhere. As a team of avid golfers, we got a little tired of spending half our time hunting for lost balls in the woods and the other half complaining about our scores. We realized the perfect round of golf was one you could have anytime, anywhere—without the water hazards. So, we decided to build it ourselves! We combine our love for the game with cutting-edge technology to create a fun, accessible, and unforgettable experience for your next party, corporate event, or a casual day with friends.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2023 Backyard Par. All rights reserved.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
