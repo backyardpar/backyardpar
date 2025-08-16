@@ -1,93 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backyard Par - Mobile Golf Simulator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #1a202c;
-            background-color: #f7fafc;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .hero-overlay {
-            background-image: linear-gradient(to right, rgba(29, 78, 216, 0.7) 0%, rgba(16, 185, 129, 0.7) 100%);
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Backyard Par — Mobile Golf Simulator</title>
+  <!-- Load Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Use Inter font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Backyard Par brings the ultimate mobile golf simulator to your event. Perfect for parties, corporate events, fundraisers, and more in Southern California."/>
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-900">
 
-    <!-- Navigation Bar -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-3xl font-bold text-gray-900 transition-colors duration-300 hover:text-green-600">Backyard Par</a>
-            
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
-                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="/index.html" class="text-xl font-extrabold tracking-tight">Backyard Par</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="/index.html" class="hover:text-green-700 transition">Home</a>
+        <a href="/how-it-works.html" class="hover:text-green-700 transition">How it Works</a>
+        <a href="/gallery.html" class="hover:text-green-700 transition">Gallery</a>
+        <a href="/about.html" class="hover:text-green-700 transition">About</a>
+        <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md">Book Now</a>
+      </nav>
+      <!-- Mobile menu button -->
+      <button class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 transition" aria-label="Open Menu" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
+        <!-- Replaced material-icons with a standard SVG for broader compatibility -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM3 17.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile navigation menu -->
+    <div id="mobileNav" class="md:hidden hidden border-t bg-white">
+      <nav class="px-4 py-3 flex flex-col gap-3">
+        <a href="/index.html" class="hover:text-green-700 transition">Home</a>
+        <a href="/how-it-works.html" class="hover:text-green-700 transition">How it Works</a>
+        <a href="/gallery.html" class="hover:text-green-700 transition">Gallery</a>
+        <a href="/about.html" class="hover:text-green-700 transition">About</a>
+        <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md w-max">Book Now</a>
+      </nav>
+    </div>
+  </header>
 
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">About Us</a>
-                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">How It Works</a>
-                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Gallery</a>
-                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl transform hover:scale-105">Book Now</a>
-            </div>
-        </nav>
-
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
-            <div class="flex flex-col items-center space-y-4">
-                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">About Us</a>
-                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">How It Works</a>
-                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">Gallery</a>
-                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl w-4/5 text-center mt-4">Book Now</a>
-            </div>
+  <!-- Hero -->
+  <section class="bg-[url('https://placehold.co/1920x400/10B981/FFFFFF?text=Backyard+Par+Hero')] bg-cover bg-center">
+    <div class="bg-black/55">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+        <!-- Updated Headline -->
+        <h1 class="text-4xl sm:text-6xl font-extrabold text-white">Your Game. Your Rules. Your Backyard.</h1>
+        <!-- Updated Description -->
+        <p class="text-white/90 mt-4 max-w-2xl mx-auto">Backyard Par is your personal golf course on demand. Whether you're planning a party, corporate event, or just a weekend of fun, we bring the swing to you. Setup is fast, the tech is sharp, and the experience is unforgettable.</p>
+        <div class="mt-6 flex justify-center gap-4">
+          <a href="/book-now.html" class="rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 transition">Book Now</a>
+          <a href="/how-it-works.html" class="rounded-md bg-white/90 px-6 py-3 font-semibold text-gray-900 hover:bg-white transition">How It Works</a>
         </div>
-    </header>
-    
-    <!-- Hero/Landing Section -->
-    <section id="home" class="relative bg-cover bg-center flex-grow flex items-center justify-center text-white" style="background-image: url('https://placehold.co/1920x1080/0d9488/ffffff?text=Golf+Simulator+Placeholder+Image');">
-        <div class="absolute inset-0 hero-overlay"></div>
-        <div class="z-10 px-4 py-16">
-            <!-- Slogan is centered and fits on one line -->
-            <h1 class="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight drop-shadow-lg">Your Game. Your Rules. Your Backyard.</h1>
-            <!-- Descriptive text is left-aligned within a centered container -->
-            <div class="max-w-2xl mx-auto text-left">
-                <p class="text-base sm:text-lg md:text-xl font-light mb-8 drop-shadow">
-                    Backyard Par is your personal golf course on demand. Whether you're planning a party, corporate event, or just a weekend of fun, we bring the swing to you. Setup is fast, the tech is sharp, and the experience is unforgettable.
-                </p>
-            </div>
-            <!-- The button is in its own centered container -->
-            <div class="text-center mt-8">
-                <a href="book-now.html" class="bg-green-500 text-white px-8 py-4 text-lg font-bold rounded-full hover:bg-green-600 transition duration-300 shadow-2xl transform hover:scale-105">
-                    Book Now
-                </a>
-            </div>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 mt-auto">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-4">&copy; 2023 Backyard Par. All rights reserved.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
+  <!-- Event Types -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <h2 class="text-3xl font-extrabold text-center">Perfect for Any Event</h2>
+    <div class="grid md:grid-cols-4 gap-6 mt-10">
+      <div class="p-6 bg-white rounded-xl shadow border text-center">
+        <h3 class="font-semibold">Birthday Parties</h3>
+        <p class="text-sm text-gray-600 mt-2">Make it unforgettable with golf games everyone can enjoy.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow border text-center">
+        <h3 class="font-semibold">Corporate Events</h3>
+        <p class="text-sm text-gray-600 mt-2">Team-building with a fun, competitive twist.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow border text-center">
+        <h3 class="font-semibold">Fundraisers</h3>
+        <p class="text-sm text-gray-600 mt-2">Draw crowds and raise money with interactive golf challenges.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow border text-center">
+        <h3 class="font-semibold">Tailgates</h3>
+        <p class="text-sm text-gray-600 mt-2">Bring golf excitement to your pre-game festivities.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- JavaScript for Mobile Menu -->
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-    </script>
+  <!-- What You Get -->
+  <section class="bg-gray-50 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <h2 class="text-3xl font-extrabold text-center">What’s Included</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="p-6 bg-white rounded-xl shadow border text-center">
+          <h3 class="font-semibold">Pro Equipment</h3>
+          <p class="text-sm text-gray-600 mt-2">Launch monitor, giant projector screen, and enclosure.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow border text-center">
+          <h3 class="font-semibold">On-Site Tech</h3>
+          <p class="text-sm text-gray-600 mt-2">We handle setup, operation, and teardown.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow border text-center">
+          <h3 class="font-semibold">Inclusive Play</h3>
+          <p class="text-sm text-gray-600 mt-2">Righty & lefty clubs, multiple games, fun for all skill levels.</p>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="/book-now.html" class="inline-flex items-center justify-center rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 transition">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-white font-semibold">Backyard Par</h4>
+        <p class="text-sm mt-2">Los Angeles, CA • hello@backyardpar.com</p>
+        <p class="text-sm">Service area: LA, OC, IE, Ventura</p>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a href="/how-it-works.html" class="hover:text-white transition">How it Works</a></li>
+          <li><a href="/gallery.html" class="hover:text-white transition">Gallery</a></li>
+          <li><a href="/about.html" class="hover:text-white transition">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Follow</h5>
+        <div class="mt-2 flex items-center gap-3">
+          <a href="https://www.tiktok.com/@backyardpar" aria-label="TikTok" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition">
+            <!-- TikTok SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current text-white"><path d="M448,209.9a210,210,0,0,1-122.8-39.2V344.3A167.7,167.7,0,1,1,157.6,179.1v64.5a103.2,103.2,0,1,0,72.8,98.6V0h64.8a145.8,145.8,0,0,0,1.7,22.3A146.1,146.1,0,0,0,363,132.3a146.3,146.3,0,0,0,85,27.6Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/backyardpar" aria-label="Instagram" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition">
+            <!-- Instagram SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current text-white"><path d="M224,202a54,54,0,1,0,54,54A54,54,0,0,0,224,202Zm124.7-41a54,54,0,0,0-30.7-30.7C298.1,122,224,122,224,122s-74.1,0-94,8.3A54,54,0,0,0,99.3,161C91,181,91,255,91,255s0,74.1,8.3,94a54,54,0,0,0,30.7,30.7c19.9,8.3,94,8.3,94,8.3s74.1,0,94-8.3a54,54,0,0,0,30.7-30.7c8.3-19.9,8.3-94,8.3-94S356.9,181,348.7,161ZM224,338a83,83,0,1,1,83-83A83,83,0,0,1,224,338Zm85-148a19,19,0,1,1,19-19A19,19,0,0,1,309,190Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-gray-400">© Backyard Par</div>
+  </footer>
 </body>
 </html>
