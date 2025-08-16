@@ -1,178 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Backyard Par</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #1a202c;
-            background-color: #f7fafc;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        .slideshow-container {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-        }
-        .mySlides {
-            display: none;
-            width: 100%;
-            height: auto;
-            border-radius: 1rem;
-        }
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0,0,0,0.5);
-        }
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 1rem;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery — Backyard Par</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Photos and videos from Backyard Par events."/>
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    /* Add a subtle fade transition for slides */
+    .slide {
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+    }
+    .slide.active {
+      display: block;
+      opacity: 1;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <a href="/index.html" class="text-xl font-extrabold tracking-tight">Backyard Par</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="/index.html" class="hover:text-green-700">Home</a>
+        <a href="/how-it-works.html" class="hover:text-green-700">How it Works</a>
+        <a href="/gallery.html" class="hover:text-green-700">Gallery</a>
+        <a href="/about.html" class="hover:text-green-700">About</a>
+        <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 px-4 py-2 rounded-md">Book Now</a>
+      </nav>
+      <button class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100" aria-label="Open Menu" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t bg-white">
+      <nav class="px-4 py-3 flex flex-col gap-3">
+        <a href="/index.html" class="hover:text-green-700">Home</a>
+        <a href="/how-it-works.html" class="hover:text-green-700">How it Works</a>
+        <a href="/gallery.html" class="hover:text-green-700">Gallery</a>
+        <a href="/about.html" class="hover:text-green-700">About</a>
+        <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 px-4 py-2 rounded-md w-max">Book Now</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Navigation Bar -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-3xl font-bold text-gray-900 transition-colors duration-300 hover:text-green-600">Backyard Par</a>
-            
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
-                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
+  <!-- Hero -->
+  <section class="bg-cover bg-center" style="background-image: url('https://placehold.co/1920x600/10B981/FFFFFF?text=Hero+Image+Placeholder')">
+    <div class="bg-black/55">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white">Gallery</h1>
+        <p class="text-white/90 mt-3">A peek at the Backyard Par experience.</p>
+      </div>
+    </div>
+  </section>
 
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">About Us</a>
-                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">How It Works</a>
-                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300">Gallery</a>
-                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl transform hover:scale-105">Book Now</a>
-            </div>
-        </nav>
+  <!-- Video Section -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <h2 class="text-2xl font-extrabold mb-4">Watch It In Action</h2>
+    <div class="aspect-video rounded-xl overflow-hidden border shadow bg-black">
+      <!-- The video link provided is a placeholder. Be sure to replace it. -->
+      <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+              title="Backyard Par Demo Video" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+    </div>
+  </section>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
-            <div class="flex flex-col items-center space-y-4">
-                <a href="about.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">About Us</a>
-                <a href="how-it-works.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">How It Works</a>
-                <a href="gallery.html" class="text-gray-700 hover:text-green-600 font-semibold transition duration-300 w-full text-center py-2">Gallery</a>
-                <a href="book-now.html" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold hover:bg-green-700 transition duration-300 shadow-xl w-4/5 text-center mt-4">Book Now</a>
-            </div>
+  <!-- Slideshow -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <div class="relative bg-white border rounded-xl shadow overflow-hidden">
+      <div id="slides">
+        <!-- Re-added multiple slides for the slideshow functionality -->
+        <div class="slide active">
+          <img src="https://placehold.co/1200x800/22C55E/FFFFFF?text=Gallery+Image+2" alt="Corporate event with Backyard Par" class="w-full h-[420px] object-cover">
         </div>
-    </header>
-
-    <!-- Gallery Section -->
-    <main class="flex-grow py-16 md:py-24 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-12">See Our Setup in Action</h2>
-            
-            <!-- Video Section -->
-            <div class="max-w-4xl mx-auto mb-16">
-                <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                        title="Placeholder Video" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <p class="text-center text-gray-600 mt-4 text-sm">
-                    Watch a quick overview of our mobile golf simulator setup.
-                </p>
-            </div>
-
-            <!-- Slideshow Section -->
-            <div class="max-w-4xl mx-auto">
-                <h3 class="text-3xl font-bold text-center text-gray-900 mb-8">Image Gallery</h3>
-                <div class="slideshow-container shadow-2xl rounded-2xl">
-                    <div class="mySlides">
-                        <img src="https://placehold.co/800x600/0d9488/ffffff?text=Gallery+Image+1" alt="Golf Simulator Setup 1" class="w-full h-auto rounded-2xl">
-                    </div>
-                    <div class="mySlides">
-                        <img src="https://placehold.co/800x600/10b981/ffffff?text=Gallery+Image+2" alt="Golf Simulator Setup 2" class="w-full h-auto rounded-2xl">
-                    </div>
-                    <div class="mySlides">
-                        <img src="https://placehold.co/800x600/2563eb/ffffff?text=Gallery+Image+3" alt="Golf Simulator Setup 3" class="w-full h-auto rounded-2xl">
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
+        <div class="slide">
+          <img src="https://placehold.co/1200x800/22C55E/FFFFFF?text=Another+Great+Image" alt="Another great image" class="w-full h-[420px] object-cover">
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-8 mt-auto">
-        <div class="container mx-auto px-6 text-center">
-            <p class="mb-4">&copy; 2023 Backyard Par. All rights reserved.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
-            </div>
+        <div class="slide">
+          <img src="https://placehold.co/1200x800/22C55E/FFFFFF?text=One+More+Example" alt="One more example" class="w-full h-[420px] object-cover">
         </div>
-    </footer>
+      </div>
 
-    <!-- JavaScript for Mobile Menu and Slideshow -->
-    <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        });
-        
-        let slideIndex = 1;
-        showSlides(slideIndex);
+      <!-- Controls -->
+      <button id="prevBtn" aria-label="Previous" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 grid place-items-center hover:bg-black/60 transition">‹</button>
+      <button id="nextBtn" aria-label="Next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 grid place-items-center hover:bg-black/60 transition">›</button>
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+      <!-- Dots -->
+      <div id="dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"></div>
+    </div>
+  </section>
 
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-white font-semibold">Backyard Par</h4>
+        <p class="text-sm mt-2">Los Angeles, CA • hello@backyardpar.com</p>
+        <p class="text-sm">Service area: LA, OC, IE, Ventura</p>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a href="/how-it-works.html" class="hover:text-white">How it Works</a></li>
+          <li><a href="/gallery.html" class="hover:text-white">Gallery</a></li>
+          <li><a href="/about.html" class="hover:text-white">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Follow</h5>
+        <div class="mt-2 flex items-center gap-3">
+          <a href="https://www.tiktok.com/@backyardpar" aria-label="TikTok" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition">
+            <!-- TikTok SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current text-white"><path d="M448,209.9a210,210,0,0,1-122.8-39.2V344.3A167.7,167.7,0,1,1,157.6,179.1v64.5a103.2,103.2,0,1,0,72.8,98.6V0h64.8a145.8,145.8,0,0,0,1.7,22.3A146.1,146.1,0,0,0,363,132.3a146.3,146.3,0,0,0,85,27.6Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/backyardpar" aria-label="Instagram" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition">
+            <!-- Instagram SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current text-white"><path d="M224,202a54,54,0,1,0,54,54A54,54,0,0,0,224,202Zm124.7-41a54,54,0,0,0-30.7-30.7C298.1,122,224,122,224,122s-74.1,0-94,8.3A54,54,0,0,0,99.3,161C91,181,91,255,91,255s0,74.1,8.3,94a54,54,0,0,0,30.7,30.7c19.9,8.3,94,8.3,94,8.3s74.1,0,94-8.3a54,54,0,0,0,30.7-30.7c8.3-19.9,8.3-94,8.3-94S356.9,181,348.7,161ZM224,338a83,83,0,1,1,83-83A83,83,0,0,1,224,338Zm85-148a19,19,0,1,1,19-19A19,19,0,0,1,309,190Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-gray-400">© Backyard Par</div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = Array.from(document.querySelectorAll('.slide'));
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const dotsEl = document.getElementById('dots');
+      let index = 0;
+      let timer;
+
+      // Function to show a specific slide
+      function showSlide(i) {
+        // Hide all slides and dots first
+        slides.forEach(s => s.classList.remove('active'));
+        [...dotsEl.children].forEach(d => d.classList.remove('bg-white'));
+
+        // Activate the current slide and dot
+        slides[i].classList.add('active');
+        dotsEl.children[i].classList.add('bg-white');
+
+        index = i;
+        resetAuto();
+      }
+
+      // Function to go to the next slide
+      function next() {
+        showSlide((index + 1) % slides.length);
+      }
+
+      // Function to go to the previous slide
+      function prev() {
+        showSlide((index - 1 + slides.length) % slides.length);
+      }
+
+      // Reset the automatic slide timer
+      function resetAuto() {
+        clearInterval(timer);
+        timer = setInterval(next, 4000);
+      }
+
+      // Create dots for each slide
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition';
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.addEventListener('click', () => showSlide(i));
+        dotsEl.appendChild(dot);
+      });
+
+      // Attach event listeners to navigation buttons
+      prevBtn.addEventListener('click', prev);
+      nextBtn.addEventListener('click', next);
+
+      // Initialize the first slide and start the timer
+      if (slides.length > 0) {
+        showSlide(0);
+      }
+    });
+  </script>
 </body>
 </html>
