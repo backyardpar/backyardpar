@@ -13,9 +13,9 @@
   <meta name="description" content="Backyard Par brings the ultimate mobile golf simulator to your event. Perfect for parties, corporate events, fundraisers, and more in Southern California."/>
   <link rel="icon" href="/favicon.ico" />
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
+    body { font-family: 'Inter', sans-serif; }
+    /* Added transition to all links for a smoother hover effect */
+    a { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
@@ -30,6 +30,9 @@
         <a href="/gallery.html" class="hover:text-green-700 transition">Gallery</a>
         <a href="/about.html" class="hover:text-green-700 transition">About</a>
         <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md">Book Now</a>
+        <!-- Added -->
+        <a href="/terms-of-service.html" class="hover:text-green-700 transition">Terms of Service</a>
+        <a href="/privacy-policy.html" class="hover:text-green-700 transition">Privacy</a>
       </nav>
       <!-- Mobile menu button -->
       <button class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 transition" aria-label="Open Menu" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
@@ -47,6 +50,9 @@
         <a href="/gallery.html" class="hover:text-green-700 transition">Gallery</a>
         <a href="/about.html" class="hover:text-green-700 transition">About</a>
         <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md w-max">Book Now</a>
+        <!-- Added -->
+        <a href="/terms-of-service.html" class="hover:text-green-700 transition">Terms of Service</a>
+        <a href="/privacy-policy.html" class="hover:text-green-700 transition">Privacy</a>
       </nav>
     </div>
   </header>
@@ -59,33 +65,9 @@
         <h1 class="text-4xl sm:text-6xl font-extrabold text-white">Your Game. Your Rules. Your Backyard.</h1>
         <!-- Updated Description -->
         <p class="text-white/90 mt-4 max-w-2xl mx-auto">Backyard Par is your personal golf course on demand. Whether you're planning a party, corporate event, or just a weekend of fun, we bring the swing to you. Setup is fast, the tech is sharp, and the experience is unforgettable.</p>
-        <div class="mt-6 flex justify-center gap-4">
-          <a href="/book-now.html" class="rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 transition">Book Now</a>
-          <a href="/how-it-works.html" class="rounded-md bg-white/90 px-6 py-3 font-semibold text-gray-900 hover:bg-white transition">How It Works</a>
+        <div class="mt-8">
+          <a href="/book-now.html" class="inline-flex items-center justify-center rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 transition">Book Now</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Event Types -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-    <h2 class="text-3xl font-extrabold text-center">Perfect for Any Event</h2>
-    <div class="grid md:grid-cols-4 gap-6 mt-10">
-      <div class="p-6 bg-white rounded-xl shadow border text-center">
-        <h3 class="font-semibold">Birthday Parties</h3>
-        <p class="text-sm text-gray-600 mt-2">Make it unforgettable with golf games everyone can enjoy.</p>
-      </div>
-      <div class="p-6 bg-white rounded-xl shadow border text-center">
-        <h3 class="font-semibold">Corporate Events</h3>
-        <p class="text-sm text-gray-600 mt-2">Team-building with a fun, competitive twist.</p>
-      </div>
-      <div class="p-6 bg-white rounded-xl shadow border text-center">
-        <h3 class="font-semibold">Fundraisers</h3>
-        <p class="text-sm text-gray-600 mt-2">Draw crowds and raise money with interactive golf challenges.</p>
-      </div>
-      <div class="p-6 bg-white rounded-xl shadow border text-center">
-        <h3 class="font-semibold">Tailgates</h3>
-        <p class="text-sm text-gray-600 mt-2">Bring golf excitement to your pre-game festivities.</p>
       </div>
     </div>
   </section>
@@ -119,7 +101,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
       <div>
         <h4 class="text-white font-semibold">Backyard Par</h4>
-        <p class="text-sm mt-2">Los Angeles, CA • hello@backyardpar.com</p>
+        <p class="text-sm mt-2">Los Angeles, CA • <a href="mailto:hello@backyardpar.com" class="underline">hello@backyardpar.com</a></p>
         <p class="text-sm">Service area: LA, OC, IE, Ventura</p>
       </div>
       <div>
@@ -128,6 +110,9 @@
           <li><a href="/how-it-works.html" class="hover:text-white transition">How it Works</a></li>
           <li><a href="/gallery.html" class="hover:text-white transition">Gallery</a></li>
           <li><a href="/about.html" class="hover:text-white transition">About</a></li>
+          <!-- Added -->
+          <li><a href="/terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+          <li><a href="/privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
         </ul>
       </div>
       <div>
