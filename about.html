@@ -4,13 +4,18 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About — Backyard Par</title>
+  <!-- Load Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Use Inter font from Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <meta name="description" content="The story behind Backyard Par and our mobile golf simulator experience."/>
   <link rel="icon" href="/favicon.ico" />
-  <style>body{font-family:'Inter',sans-serif}</style>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    a { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <!-- Header -->
@@ -18,31 +23,27 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
       <a href="/index.html" class="text-xl font-extrabold tracking-tight">Backyard Par</a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="/index.html" class="hover:text-green-700">Home</a>
-        <a href="/how-it-works.html" class="hover:text-green-700">How it Works</a>
-        <a href="/gallery.html" class="hover:text-green-700">Gallery</a>
-        <a href="/about.html" class="hover:text-green-700">About</a>
+        <a href="/index.html" class="hover:text-green-700 transition">Home</a>
+        <a href="/how-it-works.html" class="hover:text-green-700 transition">How it Works</a>
+        <a href="/gallery.html" class="hover:text-green-700 transition">Gallery</a>
+        <a href="/about.html" class="hover:text-green-700 transition">About</a>
         <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md">Book Now</a>
-        <!-- Added -->
-        <a href="/terms-of-service.html" class="hover:text-green-700">Terms of Service</a>
-        <a href="/privacy-policy.html" class="hover:text-green-700">Privacy</a>
       </nav>
-      <button class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100" aria-label="Open Menu" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 transition" aria-label="Open Menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
     </div>
+    <!-- Mobile navigation menu -->
     <div id="mobileNav" class="md:hidden hidden border-t bg-white">
       <nav class="px-4 py-3 flex flex-col gap-3">
-        <a href="/index.html" class="hover:text-green-700">Home</a>
-        <a href="/how-it-works.html" class="hover:text-green-700">How it Works</a>
-        <a href="/gallery.html" class="hover:text-green-700">Gallery</a>
-        <a href="/about.html" class="hover:text-green-700">About</a>
-        <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 px-4 py-2 rounded-md w-max">Book Now</a>
-        <!-- Added -->
-        <a href="/terms-of-service.html" class="hover:text-green-700">Terms of Service</a>
-        <a href="/privacy-policy.html" class="hover:text-green-700">Privacy</a>
+        <a href="/index.html" class="hover:text-green-700 transition">Home</a>
+        <a href="/how-it-works.html" class="hover:text-green-700 transition">How it Works</a>
+        <a href="/gallery.html" class="hover:text-green-700 transition">Gallery</a>
+        <a href="/about.html" class="hover:text-green-700 transition">About</a>
+        <a href="/book-now.html" class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md w-max">Book Now</a>
       </nav>
     </div>
   </header>
@@ -57,7 +58,7 @@
     </div>
   </section>
 
-  <!-- Story (existing) -->
+  <!-- Story -->
   <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <div class="grid md:grid-cols-2 gap-10 items-center">
       <div>
@@ -78,7 +79,7 @@
     </div>
   </section>
 
-  <!-- Values (existing) -->
+  <!-- Values -->
   <section class="bg-white border-t">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
       <h2 class="text-2xl font-extrabold">What We Value</h2>
@@ -104,27 +105,28 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
       <div>
         <h4 class="text-white font-semibold">Backyard Par</h4>
-        <p class="text-sm mt-2">Los Angeles, CA • hello@backyardpar.com</p>
+        <p class="text-sm mt-2">Los Angeles, CA • <a href="mailto:hello@backyardpar.com" class="underline">hello@backyardpar.com</a></p>
         <p class="text-sm">Service area: LA, OC, IE, Ventura</p>
       </div>
       <div>
         <h5 class="text-white font-semibold">Links</h5>
         <ul class="mt-2 space-y-1 text-sm">
-          <li><a href="/how-it-works.html" class="hover:text-white">How it Works</a></li>
-          <li><a href="/gallery.html" class="hover:text-white">Gallery</a></li>
-          <li><a href="/about.html" class="hover:text-white">About</a></li>
-          <!-- Added -->
-          <li><a href="/terms-of-service.html" class="hover:text-white">Terms of Service</a></li>
-          <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+          <li><a href="/how-it-works.html" class="hover:text-white transition">How it Works</a></li>
+          <li><a href="/gallery.html" class="hover:text-white transition">Gallery</a></li>
+          <li><a href="/about.html" class="hover:text-white transition">About</a></li>
+          <li><a href="/terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+          <li><a href="/privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
         </ul>
       </div>
       <div>
         <h5 class="text-white font-semibold">Follow</h5>
         <div class="mt-2 flex items-center gap-3">
-          <a href="https://www.tiktok.com/@backyardpar" aria-label="TikTok" class="p-2 rounded-md bg-white/10 hover:bg-white/20">
+          <a href="https://www.tiktok.com/@backyardpar" aria-label="TikTok" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition">
+            <!-- TikTok SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current text-white"><path d="M448,209.9a210,210,0,0,1-122.8-39.2V344.3A167.7,167.7,0,1,1,157.6,179.1v64.5a103.2,103.2,0,1,0,72.8,98.6V0h64.8a145.8,145.8,0,0,0,1.7,22.3A146.1,146.1,0,0,0,363,132.3a146.3,146.3,0,0,0,85,27.6Z"/></svg>
           </a>
-          <a href="https://www.instagram.com/backyardpar" aria-label="Instagram" class="p-2 rounded-md bg-white/10 hover:bg-white/20">
+          <a href="https://www.instagram.com/backyardpar" aria-label="Instagram" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition">
+            <!-- Instagram SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current text-white"><path d="M224,202a54,54,0,1,0,54,54A54,54,0,0,0,224,202Zm124.7-41a54,54,0,0,0-30.7-30.7C298.1,122,224,122,224,122s-74.1,0-94,8.3A54,54,0,0,0,99.3,161C91,181,91,255,91,255s0,74.1,8.3,94a54,54,0,0,0,30.7,30.7c19.9,8.3,94,8.3,94,8.3s74.1,0,94-8.3a54,54,0,0,0,30.7-30.7c8.3-19.9,8.3-94,8.3-94S356.9,181,348.7,161ZM224,338a83,83,0,1,1,83-83A83,83,0,0,1,224,338Zm85-148a19,19,0,1,1,19-19A19,19,0,0,1,309,190Z"/></svg>
           </a>
         </div>
@@ -134,22 +136,25 @@
   </footer>
 
   <script>
-    // Handle mobile navigation toggle (existing)
-    const mobileNavBtn = document.querySelector('.md\\:hidden > button');
-    const mobileNav = document.getElementById('mobileNav');
-    if (mobileNavBtn) {
-      mobileNavBtn.addEventListener('click', () => {
+    // Handles mobile navigation toggle and icon change
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileNav = document.getElementById('mobileNav');
+      const menuIconSvg = mobileMenuBtn.querySelector('svg');
+
+      mobileMenuBtn.addEventListener('click', () => {
         mobileNav.classList.toggle('hidden');
-        const menuIcon = mobileNavBtn.querySelector('svg');
-        if (menuIcon) {
-          if (mobileNav.classList.contains('hidden')) {
-            menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />`;
-          } else {
-            menuIcon.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />`;
-          }
+        if (mobileNav.classList.contains('hidden')) {
+          // Show menu icon
+          menuIconSvg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />`;
+          mobileMenuBtn.setAttribute('aria-label', 'Open Menu');
+        } else {
+          // Show close icon
+          menuIconSvg.innerHTML = `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />`;
+          mobileMenuBtn.setAttribute('aria-label', 'Close Menu');
         }
       });
-    }
+    });
   </script>
 </body>
 </html>
