@@ -8,21 +8,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <meta name="description" content="Photos and videos from Backyard Par events."/>
+  <meta name="description" content="A peek at the Backyard Par experience."/>
   <link rel="icon" href="/favicon.ico" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
     }
-    /* Add a subtle fade transition for slides */
     .slide {
       display: none;
-      transition: opacity 0.5s ease-in-out;
-      opacity: 0;
     }
     .slide.active {
       display: block;
-      opacity: 1;
     }
   </style>
 </head>
@@ -69,7 +65,6 @@
   <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <h2 class="text-2xl font-extrabold mb-4">Watch It In Action</h2>
     <div class="aspect-video rounded-xl overflow-hidden border shadow bg-black">
-      <!-- The video link provided is a placeholder. Be sure to replace it. -->
       <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
               title="Backyard Par Demo Video" frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -81,9 +76,8 @@
   <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
     <div class="relative bg-white border rounded-xl shadow overflow-hidden">
       <div id="slides">
-        <!-- Re-added multiple slides for the slideshow functionality -->
         <div class="slide active">
-          <img src="https://placehold.co/1200x800/22C55E/FFFFFF?text=Gallery+Image+2" alt="Corporate event with Backyard Par" class="w-full h-[420px] object-cover">
+          <img src="https://placehold.co/1200x800/22C55E/FFFFFF?text=Gallery+Image+1" alt="Corporate event with Backyard Par" class="w-full h-[420px] object-cover">
         </div>
         <div class="slide">
           <img src="https://placehold.co/1200x800/22C55E/FFFFFF?text=Another+Great+Image" alt="Another great image" class="w-full h-[420px] object-cover">
@@ -116,17 +110,17 @@
           <li><a href="/how-it-works.html" class="hover:text-white">How it Works</a></li>
           <li><a href="/gallery.html" class="hover:text-white">Gallery</a></li>
           <li><a href="/about.html" class="hover:text-white">About</a></li>
+          <li><a href="/terms-of-service.html" class="hover:text-white">Terms of Service</a></li>
+          <li><a href="/privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
         </ul>
       </div>
       <div>
         <h5 class="text-white font-semibold">Follow</h5>
         <div class="mt-2 flex items-center gap-3">
           <a href="https://www.tiktok.com/@backyardpar" aria-label="TikTok" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition">
-            <!-- TikTok SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current text-white"><path d="M448,209.9a210,210,0,0,1-122.8-39.2V344.3A167.7,167.7,0,1,1,157.6,179.1v64.5a103.2,103.2,0,1,0,72.8,98.6V0h64.8a145.8,145.8,0,0,0,1.7,22.3A146.1,146.1,0,0,0,363,132.3a146.3,146.3,0,0,0,85,27.6Z"/></svg>
           </a>
           <a href="https://www.instagram.com/backyardpar" aria-label="Instagram" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition">
-            <!-- Instagram SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current text-white"><path d="M224,202a54,54,0,1,0,54,54A54,54,0,0,0,224,202Zm124.7-41a54,54,0,0,0-30.7-30.7C298.1,122,224,122,224,122s-74.1,0-94,8.3A54,54,0,0,0,99.3,161C91,181,91,255,91,255s0,74.1,8.3,94a54,54,0,0,0,30.7,30.7c19.9,8.3,94,8.3,94,8.3s74.1,0,94-8.3a54,54,0,0,0,30.7-30.7c8.3-19.9,8.3-94,8.3-94S356.9,181,348.7,161ZM224,338a83,83,0,1,1,83-83A83,83,0,0,1,224,338Zm85-148a19,19,0,1,1,19-19A19,19,0,0,1,309,190Z"/></svg>
           </a>
         </div>
@@ -137,60 +131,59 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const slides = Array.from(document.querySelectorAll('.slide'));
+      const slidesContainer = document.getElementById('slides');
+      const slides = slidesContainer.querySelectorAll('.slide');
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
-      const dotsEl = document.getElementById('dots');
-      let index = 0;
-      let timer;
+      const dotsContainer = document.getElementById('dots');
+      let currentSlideIndex = 0;
 
       // Function to show a specific slide
-      function showSlide(i) {
-        // Hide all slides and dots first
-        slides.forEach(s => s.classList.remove('active'));
-        [...dotsEl.children].forEach(d => d.classList.remove('bg-white'));
-
-        // Activate the current slide and dot
-        slides[i].classList.add('active');
-        dotsEl.children[i].classList.add('bg-white');
-
-        index = i;
-        resetAuto();
+      function showSlide(index) {
+        // Hide all slides
+        slides.forEach(slide => slide.classList.remove('active'));
+        // Show the current slide
+        slides[index].classList.add('active');
+        // Update the active dot
+        updateDots(index);
       }
 
-      // Function to go to the next slide
-      function next() {
-        showSlide((index + 1) % slides.length);
+      // Function to move to the next slide
+      function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
       }
 
-      // Function to go to the previous slide
-      function prev() {
-        showSlide((index - 1 + slides.length) % slides.length);
+      // Function to move to the previous slide
+      function prevSlide() {
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        showSlide(currentSlideIndex);
       }
 
-      // Reset the automatic slide timer
-      function resetAuto() {
-        clearInterval(timer);
-        timer = setInterval(next, 4000);
+      // Function to create and update dots
+      function updateDots(activeDotIndex) {
+        // Clear existing dots
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < slides.length; i++) {
+          const dot = document.createElement('span');
+          dot.classList.add('w-2', 'h-2', 'rounded-full', 'bg-white', 'opacity-50', 'hover:opacity-100', 'transition');
+          if (i === activeDotIndex) {
+            dot.classList.add('opacity-100');
+          }
+          dot.addEventListener('click', () => {
+            currentSlideIndex = i;
+            showSlide(currentSlideIndex);
+          });
+          dotsContainer.appendChild(dot);
+        }
       }
 
-      // Create dots for each slide
-      slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition';
-        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        dot.addEventListener('click', () => showSlide(i));
-        dotsEl.appendChild(dot);
-      });
+      // Add event listeners to navigation buttons
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
 
-      // Attach event listeners to navigation buttons
-      prevBtn.addEventListener('click', prev);
-      nextBtn.addEventListener('click', next);
-
-      // Initialize the first slide and start the timer
-      if (slides.length > 0) {
-        showSlide(0);
-      }
+      // Initialize the slideshow on page load
+      showSlide(currentSlideIndex);
     });
   </script>
 </body>
