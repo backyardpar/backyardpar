@@ -1,279 +1,279 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Book Now — Backyard Par</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="/favicon.ico" rel="icon">
-<style>
-    body { font-family: 'Inter', sans-serif; }
-    a { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-    /* Added focus styles for form inputs */
-    input:focus, textarea:focus, select:focus {
-      outline: 2px solid #16a34a; /* Tailwind green-600 */
-      outline-offset: 2px;
-    }
-  </style>
-</link><meta content="index,follow" name="robots"/><meta content="#10B981" name="theme-color"/><meta content="Book Now — Backyard Par" property="og:title"/><meta content="Backyard Par mobile golf simulator rentals." property="og:description"/><meta content="website" property="og:type"/><meta content="https://placehold.co/1200x630/10B981/FFFFFF?text=Backyard+Par" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Book Now — Backyard Par" name="twitter:title"/><meta content="Backyard Par mobile golf simulator rentals." name="twitter:description"/><meta content="https://placehold.co/1200x630/10B981/FFFFFF?text=Backyard+Par" name="twitter:image"/><link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2310B981'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='28' fill='white' text-anchor='middle' dominant-baseline='central'%3EBP%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Book Now — Backyard Par"}</script></head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Book Now — Backyard Par</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="/favicon.ico" rel="icon">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        a { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-duration: 200ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+        /* Added focus styles for form inputs */
+        input:focus, textarea:focus, select:focus {
+            outline: 2px solid #16a34a; /* Tailwind green-600 */
+            outline-offset: 2px;
+        }
+    </style>
+    </link><meta content="index,follow" name="robots"/><meta content="#10B981" name="theme-color"/><meta content="Book Now — Backyard Par" property="og:title"/><meta content="Backyard Par mobile golf simulator rentals." property="og:description"/><meta content="website" property="og:type"/><meta content="https://placehold.co/1200x630/10B981/FFFFFF?text=Backyard+Par" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Book Now — Backyard Par" name="twitter:title"/><meta content="Backyard Par mobile golf simulator rentals." name="twitter:description"/><meta content="https://placehold.co/1200x630/10B981/FFFFFF?text=Backyard+Par" name="twitter:image"/><link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2310B981'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='28' fill='white' text-anchor='middle' dominant-baseline='central'%3EBP%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Book Now — Backyard Par"}</script></head>
 <body class="bg-gray-50 text-gray-900">
 <!-- Header -->
 <header class="bg-white shadow sticky top-0 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-<a class="text-xl font-extrabold tracking-tight" href="/index.html">Backyard Par</a>
-<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-<a class="hover:text-green-700 transition" href="/index.html">Home</a>
-<a class="hover:text-green-700 transition" href="/how-it-works.html">How it Works</a>
-<a class="hover:text-green-700 transition" href="/gallery.html">Gallery</a>
-<a class="hover:text-green-700 transition" href="/about.html">About</a>
-<a class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md" href="/book-now.html">Book Now</a>
-</nav>
-<!-- Mobile menu button -->
-<button aria-label="Open Menu" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 transition" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
-<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM3 17.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" fill-rule="evenodd"></path>
-</svg>
-</button>
-</div>
-<!-- Mobile navigation menu -->
-<div class="md:hidden hidden border-t bg-white" id="mobileNav">
-<nav class="px-4 py-3 flex flex-col gap-3">
-<a class="hover:text-green-700 transition" href="/index.html">Home</a>
-<a class="hover:text-green-700 transition" href="/how-it-works.html">How it Works</a>
-<a class="hover:text-green-700 transition" href="/gallery.html">Gallery</a>
-<a class="hover:text-green-700 transition" href="/about.html">About</a>
-<a class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md w-max" href="/book-now.html">Book Now</a>
-</nav>
-</div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <a class="text-xl font-extrabold tracking-tight" href="/index.html">Backyard Par</a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a class="hover:text-green-700 transition" href="/index.html">Home</a>
+            <a class="hover:text-green-700 transition" href="/how-it-works.html">How it Works</a>
+            <a class="hover:text-green-700 transition" href="/gallery.html">Gallery</a>
+            <a class="hover:text-green-700 transition" href="/about.html">About</a>
+            <a class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md" href="/book-now.html">Book Now</a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button aria-label="Open Menu" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 transition" onclick="document.getElementById('mobileNav').classList.toggle('hidden')">
+            <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM3 17.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" fill-rule="evenodd"></path>
+            </svg>
+        </button>
+    </div>
+    <!-- Mobile navigation menu -->
+    <div class="md:hidden hidden border-t bg-white" id="mobileNav">
+        <nav class="px-4 py-3 flex flex-col gap-3">
+            <a class="hover:text-green-700 transition" href="/index.html">Home</a>
+            <a class="hover:text-green-700 transition" href="/how-it-works.html">How it Works</a>
+            <a class="hover:text-green-700 transition" href="/gallery.html">Gallery</a>
+            <a class="hover:text-green-700 transition" href="/about.html">About</a>
+            <a class="text-white bg-green-700 hover:bg-green-800 transition px-4 py-2 rounded-md w-max" href="/book-now.html">Book Now</a>
+        </nav>
+    </div>
 </header>
 <!-- Hero -->
 <section class="bg-[url('https://placehold.co/1920x400/10B981/FFFFFF?text=Backyard+Par+Booking+Hero')] bg-cover bg-center">
-<div class="bg-black/55">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-<h1 class="text-4xl sm:text-5xl font-extrabold text-white">Lock In Your Event</h1>
-<p class="text-white/90 mt-3 max-w-2xl">We bring the mobile golf simulator to you—perfect for parties, corporate events, and more.</p>
-</div>
-</div>
+    <div class="bg-black/55">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white">Lock In Your Event</h1>
+            <p class="text-white/90 mt-3 max-w-2xl">We bring the mobile golf simulator to you—perfect for parties, corporate events, and more.</p>
+        </div>
+    </div>
 </section>
 <!-- Pricing Tiers Section -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-<div class="text-center">
-<h2 class="text-4xl font-extrabold text-gray-900">Simple, Transparent Pricing</h2>
-<p class="text-gray-600 mt-2">All packages include delivery, setup, and an on-site tech.</p>
-</div>
-<div class="mt-10 grid md:grid-cols-3 gap-6">
-<!-- 2 Hour Package (Most Affordable) -->
-<a class="pricing-card block p-8 bg-white rounded-xl shadow-lg border border-gray-200 hover:ring-2 hover:ring-green-500 transition-all duration-300" data-tier="2 Hours" href="#request" id="tier-2hr">
-<div class="flex flex-col items-start h-full">
-<div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Most Affordable</div>
-<h3 class="mt-4 text-2xl font-bold">2 Hours</h3>
-<p class="mt-1 text-gray-500 text-sm">Great for tight schedules &amp; small groups</p>
-<div class="mt-4 flex items-baseline">
-<span class="text-4xl font-extrabold text-green-700">$399</span>
-<span class="ml-2 text-lg font-medium text-gray-500">+ tax</span>
-</div>
-<ul class="mt-6 space-y-3 text-left w-full">
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">Inflatable simulator enclosure</span>
-</li>
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">Pro-grade launch monitor</span>
-</li>
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">On-site technician</span>
-</li>
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">Right &amp; left-handed clubs available</span>
-</li>
-</ul>
-<button class="mt-auto block w-full rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 text-center transition-colors duration-300" type="button">Book This</button>
-</div>
-</a>
-<!-- 3 Hour Package (Best Value) - Highlighted -->
-<a class="pricing-card block p-8 bg-white rounded-xl shadow-lg border border-gray-200 ring-4 ring-green-500 transition-all duration-300" data-tier="3 Hours" href="#request" id="tier-3hr">
-<div class="flex flex-col items-start h-full">
-<div class="bg-yellow-500 text-gray-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Best Value</div>
-<h3 class="mt-4 text-2xl font-bold">3 Hours</h3>
-<p class="mt-1 text-gray-500 text-sm">Our most popular for parties</p>
-<div class="mt-4 flex items-baseline">
-<span class="text-4xl font-extrabold text-green-700">$549</span>
-<span class="ml-2 text-lg font-medium text-gray-500">+ tax</span>
-</div>
-<ul class="mt-6 space-y-3 text-left w-full">
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">Everything in 2 Hours</span>
-</li>
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">Extended play time</span>
-</li>
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">On-site leaderboard (optional)</span>
-</li>
-</ul>
-<button class="mt-auto block w-full rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 text-center transition-colors duration-300" type="button">Book This</button>
-</div>
-</a>
-<!-- 4 Hour Package (Maximum Time) -->
-<a class="pricing-card block p-8 bg-white rounded-xl shadow-lg border border-gray-200 hover:ring-2 hover:ring-green-500 transition-all duration-300" data-tier="4 Hours" href="#request" id="tier-4hr">
-<div class="flex flex-col items-start h-full">
-<div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Maximum Time</div>
-<h3 class="mt-4 text-2xl font-bold">4 Hours</h3>
-<p class="mt-1 text-gray-500 text-sm">Great for larger events and teams</p>
-<div class="mt-4 flex items-baseline">
-<span class="text-4xl font-extrabold text-green-700">$699</span>
-<span class="ml-2 text-lg font-medium text-gray-500">+ tax</span>
-</div>
-<ul class="mt-6 space-y-3 text-left w-full">
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">Everything in 3 Hours</span>
-</li>
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">Longest play window</span>
-</li>
-<li class="flex items-start">
-<svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
-<span class="ml-3 text-gray-700">Priority support</span>
-</li>
-</ul>
-<button class="mt-auto block w-full rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 text-center transition-colors duration-300" type="button">Book This</button>
-</div>
-</a>
-</div>
-<p class="text-xs text-gray-500 mt-6 text-center">Travel fee may apply outside primary service area. Taxes added at checkout.</p>
+    <div class="text-center">
+        <h2 class="text-4xl font-extrabold text-gray-900">Simple, Transparent Pricing</h2>
+        <p class="text-gray-600 mt-2">All packages include delivery, setup, and an on-site tech.</p>
+    </div>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <!-- 2 Hour Package (Most Affordable) -->
+        <a class="pricing-card block p-8 bg-white rounded-xl shadow-lg border border-gray-200 hover:ring-2 hover:ring-green-500 transition-all duration-300" data-tier="2 Hours" href="#request" id="tier-2hr">
+            <div class="flex flex-col items-start h-full">
+                <div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Most Affordable</div>
+                <h3 class="mt-4 text-2xl font-bold">2 Hours</h3>
+                <p class="mt-1 text-gray-500 text-sm">Great for tight schedules &amp; small groups</p>
+                <div class="mt-4 flex items-baseline">
+                    <span class="text-4xl font-extrabold text-green-700">$399</span>
+                    <span class="ml-2 text-lg font-medium text-gray-500">+ tax</span>
+                </div>
+                <ul class="mt-6 space-y-3 text-left w-full">
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">Inflatable simulator enclosure</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">Pro-grade launch monitor</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">On-site technician</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">Right &amp; left-handed clubs available</span>
+                    </li>
+                </ul>
+                <button class="mt-auto block w-full rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 text-center transition-colors duration-300" type="button">Book This</button>
+            </div>
+        </a>
+        <!-- 3 Hour Package (Best Value) - Highlighted -->
+        <a class="pricing-card block p-8 bg-white rounded-xl shadow-lg border border-gray-200 ring-4 ring-green-500 transition-all duration-300" data-tier="3 Hours" href="#request" id="tier-3hr">
+            <div class="flex flex-col items-start h-full">
+                <div class="bg-yellow-500 text-gray-900 text-xs font-bold px-3 py-1 rounded-full uppercase">Best Value</div>
+                <h3 class="mt-4 text-2xl font-bold">3 Hours</h3>
+                <p class="mt-1 text-gray-500 text-sm">Our most popular for parties</p>
+                <div class="mt-4 flex items-baseline">
+                    <span class="text-4xl font-extrabold text-green-700">$549</span>
+                    <span class="ml-2 text-lg font-medium text-gray-500">+ tax</span>
+                </div>
+                <ul class="mt-6 space-y-3 text-left w-full">
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">Everything in 2 Hours</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">Extended play time</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">On-site leaderboard (optional)</span>
+                    </li>
+                </ul>
+                <button class="mt-auto block w-full rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 text-center transition-colors duration-300" type="button">Book This</button>
+            </div>
+        </a>
+        <!-- 4 Hour Package (Maximum Time) -->
+        <a class="pricing-card block p-8 bg-white rounded-xl shadow-lg border border-gray-200 hover:ring-2 hover:ring-green-500 transition-all duration-300" data-tier="4 Hours" href="#request" id="tier-4hr">
+            <div class="flex flex-col items-start h-full">
+                <div class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Maximum Time</div>
+                <h3 class="mt-4 text-2xl font-bold">4 Hours</h3>
+                <p class="mt-1 text-gray-500 text-sm">Great for larger events and teams</p>
+                <div class="mt-4 flex items-baseline">
+                    <span class="text-4xl font-extrabold text-green-700">$699</span>
+                    <span class="ml-2 text-lg font-medium text-gray-500">+ tax</span>
+                </div>
+                <ul class="mt-6 space-y-3 text-left w-full">
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">Everything in 3 Hours</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">Longest play window</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-600 mt-0.5" fill="currentColor" viewbox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                        <span class="ml-3 text-gray-700">Priority support</span>
+                    </li>
+                </ul>
+                <button class="mt-auto block w-full rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 text-center transition-colors duration-300" type="button">Book This</button>
+            </div>
+        </a>
+    </div>
+    <p class="text-xs text-gray-500 mt-6 text-center">Travel fee may apply outside primary service area. Taxes added at checkout.</p>
 </section>
 <!-- Request Form -->
 <section class="bg-white border-t" id="request">
-<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-<h2 class="text-3xl font-extrabold text-gray-900">Request Your Date</h2>
-<p class="text-gray-600 mt-2">We’ll get back to you within 24 hours to confirm availability.</p>
-<div id="form-container">
-<form action="https://formspree.io/f/mgvzqpar" class="mt-8 grid grid-cols-1 gap-6" id="booking-form" method="POST">
-<input id="selected-tier-input" name="selected_tier" type="hidden" value="3 Hours"/>
-<div class="grid md:grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-medium text-gray-700" for="name">Full Name</label>
-<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="name" name="name" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-700" for="email">Email</label>
-<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="email" name="email" required="" type="email"/>
-</div>
-</div>
-<div class="grid md:grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-medium text-gray-700" for="phone">Phone</label>
-<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="phone" name="phone" required="" type="tel"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-700" for="event-date">Event Date</label>
-<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="event-date" name="event_date" required="" type="date"/>
-</div>
-</div>
-<div class="grid md:grid-cols-2 gap-6">
-<div>
-<label class="block text-sm font-medium text-gray-700" for="city">Event City</label>
-<input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="city" name="city" required="" type="text"/>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-700" for="hours">Hours</label>
-<!-- Dropdown now automatically reflects the user's selection from the pricing cards -->
-<select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="hours" name="hours" required="">
-<option value="2 Hours">2 Hours</option>
-<option value="3 Hours">3 Hours</option>
-<option value="4 Hours">4 Hours</option>
-</select>
-</div>
-</div>
-<div>
-<label class="block text-sm font-medium text-gray-700" for="details">Event Details</label>
-<textarea class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="details" name="details" rows="4"></textarea>
-</div>
-<!-- Policies card (existing) -->
-<div class="p-4 rounded-md bg-gray-50 border text-gray-700 text-sm">
-<h3 class="font-semibold text-gray-900 mb-2">Policies</h3>
-<ul class="space-y-1">
-<li>• Deposit is non-refundable; see our cancellation policy for details.</li>
-<li>• Outdoor setup; flat area; power within 75ft.</li>
-<li>• Travel fee may apply outside our core SoCal service area.</li>
-</ul>
-<label class="mt-3 flex items-start gap-3 text-sm">
-<input class="mt-1" required="" type="checkbox"/>
-<span>I agree to the policies above.</span>
-</label>
-</div>
-<!-- Explicit Terms/Privacy consent -->
-<label class="mt-3 flex items-start gap-3 text-sm">
-<input class="mt-1" name="agree_terms" required="" type="checkbox"/>
-<span>
-              I agree to the
-              <a class="underline" href="/terms-of-service.html" rel="noopener" target="_blank">Terms of Service</a>
-              and
-              <a class="underline" href="/privacy-policy.html" rel="noopener" target="_blank">Privacy Policy</a>.
-            </span>
-</label>
-<!-- Honeypot -->
-<input autocomplete="off" class="hidden" name="_gotcha" tabindex="-1" type="text">
-<button class="inline-flex items-center justify-center rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 transition" id="submit-button" type="submit">
-            Submit Request
-          </button>
-</input></form>
-</div>
-<!-- Success message (existing) -->
-<div class="hidden text-center py-10 rounded-lg" id="success-message">
-<div class="flex flex-col items-center">
-<svg class="w-12 h-12 text-green-600 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
-<h3 class="text-2xl font-bold text-gray-900">Thank you for your request!</h3>
-<p class="text-gray-600 mt-2">We have received your booking request and will get back to you shortly to confirm your date and time.</p>
-</div>
-</div>
-</div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <h2 class="text-3xl font-extrabold text-gray-900">Request Your Date</h2>
+        <p class="text-gray-600 mt-2">We’ll get back to you within 24 hours to confirm availability.</p>
+        <div id="form-container">
+            <form action="https://formspree.io/f/mgvzqpar" class="mt-8 grid grid-cols-1 gap-6" id="booking-form" method="POST">
+                <input id="selected-tier-input" name="selected_tier" type="hidden" value="3 Hours"/>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="name">Full Name</label>
+                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="name" name="name" required="" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="email">Email</label>
+                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="email" name="email" required="" type="email"/>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="phone">Phone</label>
+                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="phone" name="phone" required="" type="tel"/>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="event-date">Event Date</label>
+                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="event-date" name="event_date" required="" type="date"/>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="city">Event City</label>
+                        <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="city" name="city" required="" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700" for="hours">Hours</label>
+                        <!-- Dropdown now automatically reflects the user's selection from the pricing cards -->
+                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="hours" name="hours" required="">
+                            <option value="2 Hours">2 Hours</option>
+                            <option value="3 Hours">3 Hours</option>
+                            <option value="4 Hours">4 Hours</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700" for="details">Event Details</label>
+                    <textarea class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-700 focus:ring-green-700" id="details" name="details" rows="4"></textarea>
+                </div>
+                <!-- Policies card (existing) -->
+                <div class="p-4 rounded-md bg-gray-50 border text-gray-700 text-sm">
+                    <h3 class="font-semibold text-gray-900 mb-2">Policies</h3>
+                    <ul class="space-y-1">
+                        <li>• Deposit is non-refundable; see our cancellation policy for details.</li>
+                        <li>• Outdoor setup; flat area; power within 75ft.</li>
+                        <li>• Travel fee may apply outside our core SoCal service area.</li>
+                    </ul>
+                    <label class="mt-3 flex items-start gap-3 text-sm">
+                        <input class="mt-1" required="" type="checkbox"/>
+                        <span>I agree to the policies above.</span>
+                    </label>
+                </div>
+                <!-- Explicit Terms/Privacy consent -->
+                <label class="mt-3 flex items-start gap-3 text-sm">
+                    <input class="mt-1" name="agree_terms" required="" type="checkbox"/>
+                    <span>
+                        I agree to the
+                        <a class="underline" href="/terms-of-service.html" rel="noopener" target="_blank">Terms of Service</a>
+                        and
+                        <a class="underline" href="/privacy-policy.html" rel="noopener" target="_blank">Privacy Policy</a>.
+                    </span>
+                </label>
+                <!-- Honeypot -->
+                <input autocomplete="off" class="hidden" name="_gotcha" tabindex="-1" type="text">
+                <button class="inline-flex items-center justify-center rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800 transition" id="submit-button" type="submit">
+                    Submit Request
+                </button>
+                </input>
+            </form>
+        </div>
+        <!-- Success message (existing) -->
+        <div class="hidden text-center py-10 rounded-lg" id="success-message">
+            <div class="flex flex-col items-center">
+                <svg class="w-12 h-12 text-green-600 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <h3 class="text-2xl font-bold text-gray-900">Thank you for your request!</h3>
+                <p class="text-gray-600 mt-2">We have received your booking request and will get back to you shortly to confirm your date and time.</p>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- Footer -->
 <footer class="bg-gray-900 text-gray-300">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
-<div>
-<h4 class="text-white font-semibold">Backyard Par</h4>
-<p class="text-sm mt-2">Los Angeles, CA • <a class="underline" href="mailto:bookings@backyardpar.com">bookings@backyardpar.com</a></p>
-<p class="text-sm">Service area: LA, OC, IE, Ventura</p>
-</div>
-<div>
-<h5 class="text-white font-semibold">Links</h5>
-<ul class="mt-2 space-y-1 text-sm">
-<li><a class="hover:text-white transition" href="/how-it-works.html">How it Works</a></li>
-<li><a class="hover:text-white transition" href="/gallery.html">Gallery</a></li>
-<li><a class="hover:text-white transition" href="/about.html">About</a></li>
-<li><a class="hover:text-white transition" href="/terms-of-service.html">Terms of Service</a></li>
-<li><a class="hover:text-white transition" href="/privacy-policy.html">Privacy Policy</a></li>
-</ul>
-</div>
-<div>
-<h5 class="text-white font-semibold">Follow</h5>
-<div class="mt-2 flex items-center gap-3">
-<a aria-label="TikTok" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition" href="https://www.tiktok.com/@backyardpar">
-<svg class="w-4 h-4 fill-current text-white" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.9a210,210,0,0,1-122.8-39.2V344.3A167.7,167.7,0,1,1,157.6,179.1v64.5a103.2,103.2,0,1,0,72.8,98.6V0h64.8a145.8,145.8,0,0,0,1.7,22.3A146.1,146.1,0,0,0,363,132.3a146.3,146.3,0,0,0,85,27.6Z"></path></svg>
-</a>
-<a aria-label="Instagram" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition" href="https://www.instagram.com/backyardpar">
-<svg class="w-4 h-4 fill-current text-white" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224,202a54,54,0,1,0,54,54A54,54,0,0,0,224,202Zm124.7-41a54,54,0,0,0-30.7-30.7C298.1,122,224,122,224,122s-74.1,0-94,8.3A54,54,0,0,0,99.3,161C91,181,91,255,91,255s0,74.1,8.3,94a54,54,0,0,0,30.7,30.7c19.9,8.3,94,8.3,94,8.3s74.1,0,94-8.3a54,54,0,0,0,30.7-30.7c8.3-19.9,8.3-94,8.3-94S356.9,181,348.7,161ZM224,338a83,83,0,1,1,83-83A83,83,0,0,1,224,338Zm85-148a19,19,0,1,1,19-19A19,19,0,0,1,309,190Z"></path></svg>
-</a>
-</div>
-</div>
-</div>
-<div class="border-t border-white/10 py-4 text-center text-xs text-gray-400">© 2025 Backyard Par • All Rights Reserved</div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
+        <div>
+            <h4 class="text-white font-semibold">Backyard Par</h4>
+            <p class="text-sm mt-2">Los Angeles, CA • <a class="underline" href="mailto:bookings@backyardpar.com">bookings@backyardpar.com</a></p>
+            <p class="text-sm">Service area: LA, OC, IE, Ventura</p>
+        </div>
+        <div>
+            <h5 class="text-white font-semibold">Links</h5>
+            <ul class="mt-2 space-y-1 text-sm">
+                <li><a class="hover:text-white transition" href="/how-it-works.html">How it Works</a></li>
+                <li><a class="hover:text-white transition" href="/gallery.html">Gallery</a></li>
+                <li><a class="hover:text-white transition" href="/about.html">About</a></li>
+                <li><a class="hover:text-white transition" href="/terms-of-service.html">Terms of Service</a></li>
+                <li><a class="hover:text-white transition" href="/privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div>
+            <h5 class="text-white font-semibold">Follow</h5>
+            <div class="mt-2 flex items-center gap-3">
+                <a aria-label="TikTok" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition" href="https://www.tiktok.com/@backyardpar">
+                    <svg class="w-4 h-4 fill-current text-white" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.9a210,210,0,0,1-122.8-39.2V344.3A167.7,167.7,0,1,1,157.6,179.1v64.5a103.2,103.2,0,1,0,72.8,98.6V0h64.8a145.8,145.8,0,0,0,1.7,22.3A146.1,146.1,0,0,0,363,132.3a146.3,146.3,0,0,0,85,27.6Z"></path></svg>
+                </a>
+                <a aria-label="Instagram" class="p-2 rounded-md bg-white/10 hover:bg-white/20 transition" href="https://www.instagram.com/backyardpar">
+                    <svg class="w-4 h-4 fill-current text-white" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224,202a54,54,0,1,0,54,54A54,54,0,0,0,224,202Zm124.7-41a54,54,0,0,0-30.7-30.7C298.1,122,224,122,224,122s-74.1,0-94,8.3A54,54,0,0,0,99.3,161C91,181,91,255,91,255s0,74.1,8.3,94a54,54,0,0,0,30.7,30.7c19.9,8.3,94,8.3,94,8.3s74.1,0,94-8.3a54,54,0,0,0,30.7-30.7c8.3-19.9,8.3-94,8.3-94S356.9,181,348.7,161ZM224,338a83,83,0,1,1,83-83A83,83,0,0,1,224,338Zm85-148a19,19,0,1,1,19-19A19,19,0,0,1,309,190Z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-gray-400">© 2025 Backyard Par • All Rights Reserved</div>
 </footer>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -315,9 +315,58 @@
                 document.getElementById('request').scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // --- NEW JAVASCRIPT FOR FORM SUBMISSION ---
+        const bookingForm = document.getElementById('booking-form');
+        const formContainer = document.getElementById('form-container');
+        const successMessage = document.getElementById('success-message');
+        const submitButton = document.getElementById('submit-button');
+
+        bookingForm.addEventListener('submit', async function (e) {
+            // Prevent the default form submission which causes a page redirect.
+            e.preventDefault();
+
+            // Store original button text and disable the button to prevent double clicks.
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+
+            // Get the URL from the form's action attribute.
+            const formAction = bookingForm.action;
+            // Get the form data.
+            const formData = new FormData(bookingForm);
+
+            try {
+                // Send the form data using the Fetch API.
+                const response = await fetch(formAction, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        // Formspree requires 'Accept: application/json' for successful AJAX submissions.
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // If the submission was successful, hide the form and show the success message.
+                    formContainer.classList.add('hidden');
+                    successMessage.classList.remove('hidden');
+                } else {
+                    // If there was an error with the response, display a generic message.
+                    console.error('Form submission failed:', response);
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                }
+            } catch (error) {
+                // Handle network errors.
+                console.error('Form submission failed:', error);
+                alert('Oops! There was a network problem. Please check your connection and try again.');
+            } finally {
+                // Always reset the button state, regardless of success or failure.
+                submitButton.textContent = originalButtonText;
+                submitButton.disabled = false;
+            }
+        });
     });
-  </script>
+</script>
 </body>
 </html>
-
-
