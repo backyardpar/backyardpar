@@ -156,9 +156,10 @@
 <!-- Request Form -->
 <section class="bg-white border-t" id="request">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <h2 class="text-3xl font-extrabold text-gray-900">Request Your Date</h2>
-        <p class="text-gray-600 mt-2">We’ll get back to you within 24 hours to confirm availability.</p>
-        <div id="form-container">
+        <!-- The form content will be replaced by the success message after submission -->
+        <div id="request-content">
+            <h2 class="text-3xl font-extrabold text-gray-900">Request Your Date</h2>
+            <p class="text-gray-600 mt-2">We’ll get back to you within 24 hours to confirm availability.</p>
             <form action="https://formspree.io/f/mgvzqpar" class="mt-8 grid grid-cols-1 gap-6" id="booking-form" method="POST">
                 <input id="selected-tier-input" name="selected_tier" type="hidden" value="3 Hours"/>
                 <div class="grid md:grid-cols-2 gap-6">
@@ -317,8 +318,9 @@
         });
 
         // --- NEW JAVASCRIPT FOR FORM SUBMISSION ---
+        // Get the parent div that contains the form and the heading/subheading
+        const requestContent = document.getElementById('request-content');
         const bookingForm = document.getElementById('booking-form');
-        const formContainer = document.getElementById('form-container');
         const successMessage = document.getElementById('success-message');
         const submitButton = document.getElementById('submit-button');
 
@@ -348,8 +350,8 @@
                 });
 
                 if (response.ok) {
-                    // If the submission was successful, hide the form and show the success message.
-                    formContainer.classList.add('hidden');
+                    // If the submission was successful, hide the form content and show the success message.
+                    requestContent.classList.add('hidden');
                     successMessage.classList.remove('hidden');
                 } else {
                     // If there was an error with the response, display a generic message.
