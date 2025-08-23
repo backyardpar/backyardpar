@@ -14,15 +14,17 @@
 <link href="/favicon.ico" rel="icon">
 <style>
     body { font-family: 'Inter', sans-serif; }
-    .faq-btn + .faq-panel { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease-out; padding-top: 0; }
-    .faq-btn[aria-expanded="true"] + .faq-panel { max-height: 500px; padding-top: 1.25rem; }
+    .faq-panel { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; }
+    .faq-panel-inner { padding: 1.25rem 1.5rem; }
+    .faq-btn[aria-expanded="true"] .plus-icon { display: none; }
+    .faq-btn[aria-expanded="false"] .minus-icon { display: none; }
   </style>
 </link><meta content="index,follow" name="robots"/><meta content="#10B981" name="theme-color"/><meta content="How It Works — Backyard Par" property="og:title"/><meta content="See how Backyard Par sets up and runs your mobile golf simulator event." property="og:description"/><meta content="website" property="og:type"/><meta content="https://placehold.co/1200x630/10B981/FFFFFF?text=Backyard+Par" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="How It Works — Backyard Par" name="twitter:title"/><meta content="See how Backyard Par sets up and runs your mobile golf simulator event." name="twitter:description"/><meta content="https://placehold.co/1200x630/10B981/FFFFFF?text=Backyard+Par" name="twitter:image"/><link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2310B981'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='28' fill='white' text-anchor='middle' dominant-baseline='central'%3EBP%3C/text%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "How It Works — Backyard Par"}</script></head>
 <body class="bg-gray-50 text-gray-900">
 <!-- Header -->
 <header class="bg-white shadow sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-<a href="/index.html"><img src="./Final%20Draft%20Logo.png" alt="Backyard Par Logo" class="h-16 w-auto"></a>
+<a href="/index.html"><img src="Final Draft Logo.png" alt="Backyard Par Logo" class="h-8 md:h-10"></a>
 <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
 <a class="hover:text-green-700" href="/index.html">Home</a>
 <a class="hover:text-green-700" href="/how-it-works.html">How it Works</a>
@@ -55,74 +57,106 @@
 </div>
 </div>
 </section>
-<!-- Steps (existing content) -->
+<!-- Steps -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+<h2 class="text-3xl font-extrabold text-center mb-10">Your Event in 3 Simple Steps</h2>
 <div class="grid md:grid-cols-3 gap-8">
-<div class="p-6 bg-white rounded-xl shadow border">
-<h3 class="text-xl font-bold">1) We Arrive &amp; Set Up</h3>
-<p class="text-gray-600 mt-2">We bring the inflatable enclosure, projector, launch monitor, and everything needed.</p>
+<div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-green-700 text-center">
+<div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 text-green-700 mx-auto mb-4 text-3xl font-bold">1</div>
+<h3 class="text-xl font-bold">Book &amp; Confirm</h3>
+<p class="text-gray-600 mt-2">Choose your preferred date and package. We’ll confirm all the details and requirements with you within 24 hours to secure your event.</p>
 </div>
-<div class="p-6 bg-white rounded-xl shadow border">
-<h3 class="text-xl font-bold">2) Game Time</h3>
-<p class="text-gray-600 mt-2">Choose from multiple game modes and challenges. Clubs provided (or bring your own).</p>
+<div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-green-700 text-center">
+<div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 text-green-700 mx-auto mb-4 text-3xl font-bold">2</div>
+<h3 class="text-xl font-bold">We Arrive &amp; Set Up</h3>
+<p class="text-gray-600 mt-2">On the day of your event, our professional team will arrive, set up the inflatable enclosure, projector, and state-of-the-art launch monitor in just 45–60 minutes.</p>
 </div>
-<div class="p-6 bg-white rounded-xl shadow border">
-<h3 class="text-xl font-bold">3) Pack Up</h3>
-<p class="text-gray-600 mt-2">We tear down quickly and leave your space as we found it.</p>
+<div class="p-6 bg-white rounded-xl shadow-lg border-t-4 border-green-700 text-center">
+<div class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 text-green-700 mx-auto mb-4 text-3xl font-bold">3</div>
+<h3 class="text-xl font-bold">Enjoy &amp; Play</h3>
+<p class="text-gray-600 mt-2">Your guests can enjoy a variety of golf courses and game modes. We provide both right- and left-handed clubs, and our technician is on hand to assist with the fun.</p>
 </div>
-</div>
-<!-- Requirements -->
-<div class="mt-12 p-6 bg-gray-50 rounded-xl border">
-<h3 class="text-lg font-semibold text-gray-900">Event Requirements</h3>
-<ul class="mt-2 text-sm text-gray-700 space-y-1">
-<li>• Outdoor setup only. Flat, open area (min 15’ W × 20’ D × 10’ H).</li>
-<li>• One standard power outlet within 75 feet.</li>
-<li>• Setup time ~45–60 minutes. We handle everything.</li>
-</ul>
-</div>
-<div class="text-center mt-10">
-<a class="inline-flex items-center justify-center rounded-md bg-green-700 px-6 py-3 font-semibold text-white hover:bg-green-800" href="/book-now.html">Book Now</a>
 </div>
 </section>
-<!-- FAQ (existing content) -->
+<!-- FAQ section -->
 <section class="bg-white border-t">
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-<div class="rounded-xl border bg-white">
-<!-- Item -->
-<button aria-expanded="false" class="w-full text-left px-5 py-4 flex items-center justify-between faq-btn">
-<span class="font-semibold">How much space is required?</span>
-<span class="ml-4 text-gray-500">+</span>
+<h2 class="text-3xl font-extrabold text-center mb-10">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<!-- FAQ Item 1 -->
+<div class="border rounded-xl overflow-hidden shadow">
+<button aria-expanded="false" class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between transition-colors duration-300 hover:bg-gray-50">
+<span class="font-semibold text-lg text-gray-900">How much space is required for the setup?</span>
+<span class="ml-4 text-gray-500">
+<svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 12h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span>
 </button>
-<div class="px-5 pb-5 hidden faq-panel">
-<p class="text-gray-700">Minimum clear area of <strong>15’ W × 20’ D × 10’ H</strong>. Flat surface only.</p>
+<div class="faq-panel">
+<div class="faq-panel-inner">
+<p class="text-gray-700">A minimum clear area of <strong>16’ W × 20’ D × 11’ H</strong> is required for a safe setup on a flat, outdoor surface. Please ensure there is also enough clearance for entry and exit.</p>
 </div>
-<button aria-expanded="false" class="w-full text-left px-5 py-4 flex items-center justify-between faq-btn">
-<span class="font-semibold">Do you provide clubs?</span>
-<span class="ml-4 text-gray-500">+</span>
-</button>
-<div class="px-5 pb-5 hidden faq-panel">
-<p class="text-gray-700">Yes — right- and left-handed clubs are available, or bring your own.</p>
 </div>
-<button aria-expanded="false" class="w-full text-left px-5 py-4 flex items-center justify-between faq-btn">
-<span class="font-semibold">What about power and setup?</span>
-<span class="ml-4 text-gray-500">+</span>
-</button>
-<div class="px-5 pb-5 hidden faq-panel">
-<p class="text-gray-700">We need a standard power outlet within 75 feet. Setup typically takes 45–60 minutes.</p>
 </div>
-<button aria-expanded="false" class="w-full text-left px-5 py-4 flex items-center justify-between faq-btn">
-<span class="font-semibold">What happens in bad weather?</span>
-<span class="ml-4 text-gray-500">+</span>
+<!-- FAQ Item 2 -->
+<div class="border rounded-xl overflow-hidden shadow">
+<button aria-expanded="false" class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between transition-colors duration-300 hover:bg-gray-50">
+<span class="font-semibold text-lg text-gray-900">Do you provide golf clubs and balls?</span>
+<span class="ml-4 text-gray-500">
+<svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 12h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span>
 </button>
-<div class="px-5 pb-5 hidden faq-panel">
-<p class="text-gray-700">For safety, we may reschedule if there’s heavy rain or high winds. We’ll work with you to find a new date.</p>
+<div class="faq-panel">
+<div class="faq-panel-inner">
+<p class="text-gray-700">Yes, we provide both right- and left-handed clubs as well as foam golf balls that are safe for use. You are also welcome to bring your own clubs.</p>
 </div>
-<button aria-expanded="false" class="w-full text-left px-5 py-4 flex items-center justify-between faq-btn">
-<span class="font-semibold">Is there a travel fee?</span>
-<span class="ml-4 text-gray-500">+</span>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="border rounded-xl overflow-hidden shadow">
+<button aria-expanded="false" class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between transition-colors duration-300 hover:bg-gray-50">
+<span class="font-semibold text-lg text-gray-900">What about power and setup time?</span>
+<span class="ml-4 text-gray-500">
+<svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 12h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span>
 </button>
-<div class="px-5 pb-5 hidden faq-panel">
-<p class="text-gray-700">Events outside our core SoCal service area may include a travel fee. We’ll confirm during booking.</p>
+<div class="faq-panel">
+<div class="faq-panel-inner">
+<p class="text-gray-700">We need a standard power outlet within 75 feet of the setup location. Our team handles the entire setup, which typically takes between 45 and 60 minutes.</p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="border rounded-xl overflow-hidden shadow">
+<button aria-expanded="false" class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between transition-colors duration-300 hover:bg-gray-50">
+<span class="font-semibold text-lg text-gray-900">What is your policy on bad weather?</span>
+<span class="ml-4 text-gray-500">
+<svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 12h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span>
+</button>
+<div class="faq-panel">
+<div class="faq-panel-inner">
+<p class="text-gray-700">For the safety of our equipment and your guests, we may need to reschedule your event in case of heavy rain or high winds. We will work with you to find a new date, or a full refund will be issued if rescheduling is not possible.</p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="border rounded-xl overflow-hidden shadow">
+<button aria-expanded="false" class="faq-btn w-full text-left px-6 py-4 flex items-center justify-between transition-colors duration-300 hover:bg-gray-50">
+<span class="font-semibold text-lg text-gray-900">Is there a travel fee?</span>
+<span class="ml-4 text-gray-500">
+<svg class="plus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="minus-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 12h-15" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</span>
+</button>
+<div class="faq-panel">
+<div class="faq-panel-inner">
+<p class="text-gray-700">A travel fee may apply for events scheduled outside of our primary Southern California service area. We will confirm any potential travel fees during the booking process.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -132,7 +166,7 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
 <div>
 <h4 class="text-white font-semibold">Backyard Par</h4>
-<p class="text-sm mt-2">Los Angeles, CA • bookings@backyardpar.com</p>
+<p class="text-sm mt-2">Los Angeles, CA • <a class="underline" href="mailto:bookings@backyardpar.com">bookings@backyardpar.com</a></p>
 <p class="text-sm">Service area: LA, OC, IE, Ventura</p>
 </div>
 <div>
@@ -141,7 +175,6 @@
 <li><a class="hover:text-white" href="/how-it-works.html">How it Works</a></li>
 <li><a class="hover:text-white" href="/gallery.html">Gallery</a></li>
 <li><a class="hover:text-white" href="/about.html">About</a></li>
-<!-- Added -->
 <li><a class="hover:text-white" href="/terms-of-service.html">Terms of Service</a></li>
 <li><a class="hover:text-white" href="/privacy-policy.html">Privacy Policy</a></li>
 </ul>
@@ -161,17 +194,20 @@
 <div class="border-t border-white/10 py-4 text-center text-xs text-gray-400">© 2025 Backyard Par • All Rights Reserved</div>
 </footer>
 <script>
-    // FAQ toggle (unchanged)
+    // FAQ toggle script
     document.querySelectorAll('.faq-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
         btn.setAttribute('aria-expanded', String(!expanded));
-        btn.nextElementSibling.classList.toggle('hidden');
+        const panel = btn.nextElementSibling;
+        const innerPanel = panel.querySelector('.faq-panel-inner');
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = innerPanel.scrollHeight + 'px';
+        }
       });
     });
   </script>
 </body>
 </html>
-
-
-
